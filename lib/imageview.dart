@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Image.asset("images/me.png"),
+          child: Image.network("images/me.png"),
         ),
       ),
     );
