@@ -11,10 +11,33 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Flutter ListView Application', style: TextStyle(fontSize:25, fontWeight: FontWeight.bold, color: Colors.green ),)),
+          title: Center(child: Text('Flutter ListView Application', style: TextStyle(fontSize:25, fontFamily: 'Roboto', fontWeight: FontWeight.bold, color: Colors.green ),)),
         ),
-        body: Container(
-
+        body: ListView(
+          scrollDirection: Axis.horizontal,
+          reverse: true,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('One' , style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700, color: Colors.green),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Two' , style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700, color: Colors.green),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Three' , style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700, color: Colors.green),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Four' , style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700, color: Colors.green),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text('Five', style: TextStyle(fontSize: 25, fontWeight: FontWeight.w700, color: Colors.green),),
+            ),
+          ],
         ),
       ),
     );
