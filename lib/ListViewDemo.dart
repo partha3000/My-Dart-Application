@@ -1,4 +1,3 @@
-import 'package:application_demo1/appBar.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
