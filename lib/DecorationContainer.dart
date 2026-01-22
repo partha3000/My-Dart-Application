@@ -28,7 +28,33 @@ class DecorationContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flutter Decoration Apps"),
+        backgroundColor: Colors.lightGreen,
+        title: Center(child: Text("Flutter Decoration Apps")),
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        // color: Colors.lightGreenAccent,
+        child: Center(
+          child: Container(
+            height: 100,
+            width: 100,
+            decoration: BoxDecoration (
+              color: Colors.orange,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                width: 4,
+                color: Colors.black38
+              ),
+              boxShadow: [
+                BoxShadow(
+                  blurRadius: 20,
+                  color: Colors.red,
+                )
+              ]
+            ),
+          ),
+        ),
       ),
     );
   }
