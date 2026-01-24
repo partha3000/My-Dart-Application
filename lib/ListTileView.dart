@@ -16,13 +16,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: ListTile(),
+      home: ListTileScreen(),
     );
   }
 }
 
-class ListTile extends StatelessWidget {
-  const ListTile({super.key});
+class ListTileScreen extends StatelessWidget {
+  const ListTileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +32,19 @@ class ListTile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text('ListTime Screen')),
+      ),
+
+      body: ListView.separated(itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(arrNames[index]),
+          subtitle: Text('Number'),
+          trailing: Image.asset('images/me.png'),
+        );
+      },
+        itemCount: arrNames.length,
+        separatorBuilder: (context, index) {
+        return Divider(height: 25, thickness: 1,);
+        },
       ),
     );
   }
