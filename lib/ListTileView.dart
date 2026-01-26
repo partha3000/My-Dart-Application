@@ -34,7 +34,8 @@ class ListTileScreen extends StatelessWidget {
         title: Center(child: Text('ListTime Screen')),
       ),
 
-      body: ListView.separated(itemBuilder: (context, index) {
+      body:
+      ListView.separated(itemBuilder: (context, index) {
         return ListTile(
           title: Text(arrNames[index]),
           subtitle: Text('Number'),
