@@ -33,7 +33,21 @@ class CircleAvatarScreen extends StatelessWidget{
       appBar: AppBar(
         title: Center(child: Text("Circle Avatar page")),
       ),
-      body: ListView.,
+      body:
+      ListView.separated(itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(arrList[index]),
+          subtitle: Text('Number'),
+          trailing: Image.asset('images/me.png'),
+        );
+      },
+        itemCount: arrList.length,
+        separatorBuilder: (context, index) {
+          return Divider(height: 25, thickness: 1,);
+        },
+      ),
+
+
     );
   }
 }
