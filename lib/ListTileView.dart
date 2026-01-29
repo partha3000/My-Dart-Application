@@ -31,7 +31,7 @@ class ListTileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text('ListTime Screen')),
+        title: Center(child: Text('ListTime Screen', style: TextStyle(fontFamily: 'FontMain', fontSize: 25),)),
       ),
 
       body:

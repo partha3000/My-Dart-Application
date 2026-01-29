@@ -27,49 +27,28 @@ class CircleAvatarScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    var arrList = ['Home', 'about', 'new', 'page', 'setting', 'profile'];
+    var arrList = ['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Circle Avatar page")),
+        title: Center(child: Text("Circle Avatar", style: TextStyle(fontFamily: 'serif'),)),
+        backgroundColor: Colors.lightGreen,
       ),
-      body:
-      ListView.separated(itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(arrList[index]),
-          subtitle: Text('Number'),
-          trailing: Image.asset('images/me.png'),
-        );
+      body: ListView.separated(itemBuilder: (context, index){
+      return ListTile(
+        leading: Text('${index+1}'),
+        title: Text(arrList[index]),
+        subtitle: Text("Give the number list", style: TextStyle(fontFamily: 'serif', fontSize: 15),),
+        trailing: Icon(Icons.add),
+      );
       },
-        itemCount: arrList.length,
-        separatorBuilder: (context, index) {
-          return Divider(height: 25, thickness: 1,);
+      itemCount: arrList.length,
+        separatorBuilder: (context, index){
+        return Divider(
+          height: 20,
+          thickness: 1,
+        );
         },
-      ),
-      Container(
-        height: double.infinity,
-        width: double.infinity,
-        // color: Colors.lightGreenAccent,
-        child: Center(
-          child: Container(
-            height: 100,
-            width: 100,
-            decoration: BoxDecoration (
-                color: Colors.orange,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                    width: 4,
-                    color: Colors.black38
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 20,
-                    color: Colors.red,
-                  )
-                ]
-            ),
-          ),
-        ),
       ),
     );
   }
